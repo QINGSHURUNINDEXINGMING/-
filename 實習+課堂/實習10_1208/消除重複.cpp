@@ -3,6 +3,42 @@
 //    讀入所有數字後，印出使用者輸入過的合法且不重複數值(依輸入的順序)。
 //    假設在「最壞狀況」下，所有20個數字都不相同。請用最小的陣列來解決這個問題。
 
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	int n, v[20] = {}, counter = 0;
+	bool elimination = 0;
+
+	for (int i = 1; i <= 20; i++) 
+	{
+		cin >> n;
+		elimination = 0;
+
+		if (n >= 10 && n <= 100)
+		{
+			for (int j = 0; j<counter; j++)
+			{
+				if (v[j] == n) 
+				{
+					elimination = 1;
+					break;
+				}
+			}
+			if (elimination == 0)
+			{
+				v[counter] = n;
+				counter++;
+			}
+		}
+	}
+	for (int k = 0; k<counter; k++) 
+	{
+		cout << v[k];
+	}
+}
 
 /*    學弟寫的
 

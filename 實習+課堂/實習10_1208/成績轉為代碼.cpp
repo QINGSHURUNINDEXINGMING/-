@@ -17,39 +17,37 @@
 
 using namespace std;
 
-int main()
+int main() 
 {
-    int n;
-    int var[5]={0};
-    cin>>n;
-    while(n!=-1)
+	int n, v[5] = { 0 };
+	
+	while (cin >> n&&n != -1) 
 	{
-        if(90<=n&&n<=100)
+		if (n / 10 == 9 ? 1 : n / 10 == 10) //if (n / 10 == 10 || n / 10 == 9)
 		{
-            var[0]++;
-        }
-		else if(80<=n&&n<=89)
+			v[0]++;
+		}
+		else if (n / 10 == 8) 
 		{
-            var[1]++;
-        }
-		else if(70<=n&&n<=79)
+			v[1]++;
+		}
+		else if (n / 10 == 7) 
 		{
-            var[2]++;
-        }
-		else if(60<=n&&n<=69)
+			v[2]++;
+		}
+		else if (n / 10 == 6) 
 		{
-            var[3]++;
-        }
-		else
+			v[3]++;
+		}
+		else 
 		{
-            var[4]++;
-        }
-        cin>>n;
-    }
-    for(int i=0; i<5; i++)
+			v[4]++;
+		}
+	}
+	for (int i = 0; i<5; i++) 
 	{
-        cout<<var[i];
-    }
+		cout << v[i] << " ";
+	}
 }
 
 /*   ¾Ç§Ì¼gªº
